@@ -9,5 +9,9 @@ public class Main {
         int result1_day2 = redNosedReports.result();
         System.out.println("Day 1 Advent of Code: " + result_day1 + " " + result2_day1);
         System.out.println("Day 2 Advent of Code: " + result1_day2 + " " );
+        NorthPoleRentalShop northPoleRentalShop = new NorthPoleRentalShop();
+        int result_day3 = northPoleRentalShop.result();
+        int result2_day3 = northPoleRentalShop.result_part2();
+        System.out.println("Day 3 Advent of Code: " + result_day3 + " " + result2_day3);
     }
 }
