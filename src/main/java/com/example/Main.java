@@ -17,5 +17,9 @@ public class Main {
         int result_day4 = ceresMonitoringStation.result();
         int result2_day4 = ceresMonitoringStation.result_part2();
         System.out.println("Day 4 Advent of Code: " + result_day4 + " " + result2_day4);
+        PrintQueue printQueue = new PrintQueue();
+        int result_day5 = printQueue.result();
+        int result2_day5 = printQueue.result_part2();
+        System.out.println("Day 5 Advent of Code: " + result_day5 + " " + result2_day5);
     }
 }
