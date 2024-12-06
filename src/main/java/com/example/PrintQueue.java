@@ -60,7 +60,67 @@ public class PrintQueue {
     }
 
     public int result_part2() {
-        return 0;
+        Result output = readFileAndPrint();
+        List<List<Object>> rules = output.rules;
+        List<List<Integer>> otherArrays = output.otherArrays;
+
+        // System.out.println("Rules: " + rules);
+        // System.out.println("Other Arrays: " + otherArrays);
+
+        int sum = 0;
+        for (List<Integer> otherArray : otherArrays) {
+            boolean validArray = false;
+
+            while (!validArray) {
+                validArray = true;
+
+                for (int i = 0; i < otherArray.size(); i++) {
+                    int number = otherArray.get(i);
+                    boolean valid = false;
+
+                    for (List<Object> rule : rules) {
+                        int ruleNumber = (int) rule.get(0);
+                        List<Integer> after = (List<Integer>) rule.get(1);
+                        List<Integer> before = (List<Integer>) rule.get(2);
+
+                        if (number == ruleNumber) {
+                            valid = true;
+                            for (int j = 0; j < i; j++) {
+                                if (!before.contains(otherArray.get(j))) {
+                                    valid = false;
+                                    // Swap with the previous element
+                                    Collections.swap(otherArray, i, j);
+                                    i = -1; // Restart validation from the beginning
+                                    break;
+                                }
+                            }
+                            if (valid) {
+                                for (int j = i + 1; j < otherArray.size(); j++) {
+                                    if (!after.contains(otherArray.get(j))) {
+                                        valid = false;
+                                        // Swap with the next element
+                                        Collections.swap(otherArray, i, j);
+                                        i = -1; // Restart validation from the beginning
+                                        break;
+                                    }
+                                }
+                            }
+                            break;
+                        }
+                    }
+
+                    if (!valid) {
+                        validArray = false;
+                        break;
+                    }
+                }
+            }
+            System.out.println("Valid otherArray: " + otherArray);
+            int middleIndex = otherArray.size() / 2;
+            sum += otherArray.get(middleIndex);
+
+        }
+        return sum;
     }
 
     public static Result readFileAndPrint() {
