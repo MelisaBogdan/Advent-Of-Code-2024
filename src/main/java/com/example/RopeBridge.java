@@ -14,11 +14,11 @@ public class RopeBridge {
             long target = array[0];
             StringBuilder expression = new StringBuilder();
             if (isValidCombination(array, target, expression)) {
-                System.err.println("Valid array: " + arrayToString(array) + " with expression: " + expression.toString());
+                // System.err.println("Valid array: " + arrayToString(array) + " with expression: " + expression.toString());
                 totalSum += target;
             }
         }
-        System.err.println("Total sum of valid arrays: " + totalSum);
+        // System.err.println("Total sum of valid arrays: " + totalSum);
         return totalSum;
     }
 
@@ -29,7 +29,7 @@ public class RopeBridge {
             long target = array[0];
             StringBuilder expression = new StringBuilder();
             if (isValidCombinationWithConcatenation(array, target, expression)) {
-                System.err.println("Valid array: " + arrayToString(array) + " with expression: " + expression.toString());
+                // System.err.println("Valid array: " + arrayToString(array) + " with expression: " + expression.toString());
                 totalSum += target;
             }
         }
