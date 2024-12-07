@@ -23,19 +23,19 @@ public class RopeBridge {
     }
 
     public long result_part2() {
-        // List<long[]> parsedData = readFileAndParse();
-        // long totalSum = 0;
-        // for (long[] array : parsedData) {
-        //     long target = array[0];
-        //     StringBuilder expression = new StringBuilder();
-        //     if (isValidCombinationWithConcatenation(array, target, expression)) {
-        //         System.err.println("Valid array: " + arrayToString(array) + " with expression: " + expression.toString());
-        //         totalSum += target;
-        //     }
-        // }
+        List<long[]> parsedData = readFileAndParse();
+        long totalSum = 0;
+        for (long[] array : parsedData) {
+            long target = array[0];
+            StringBuilder expression = new StringBuilder();
+            if (isValidCombinationWithConcatenation(array, target, expression)) {
+                System.err.println("Valid array: " + arrayToString(array) + " with expression: " + expression.toString());
+                totalSum += target;
+            }
+        }
         // System.err.println("Total sum of valid arrays: " + totalSum);
-        // return totalSum;
-        return 0;
+        return totalSum;
+        // return 0;
     }
 
     private static boolean isValidCombination(long[] array, long target, StringBuilder expression) {
