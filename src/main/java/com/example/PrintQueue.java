@@ -64,9 +64,6 @@ public class PrintQueue {
         List<List<Object>> rules = output.rules;
         List<List<Integer>> otherArrays = output.otherArrays;
 
-        // System.out.println("Rules: " + rules);
-        // System.out.println("Other Arrays: " + otherArrays);
-
         int sum = 0;
         for (List<Integer> otherArray : otherArrays) {
             boolean validArray = false;
@@ -88,9 +85,9 @@ public class PrintQueue {
                             for (int j = 0; j < i; j++) {
                                 if (!before.contains(otherArray.get(j))) {
                                     valid = false;
-                                    // Swap with the previous element
+                            
                                     Collections.swap(otherArray, i, j);
-                                    i = -1; // Restart validation from the beginning
+                        
                                     break;
                                 }
                             }
@@ -98,9 +95,8 @@ public class PrintQueue {
                                 for (int j = i + 1; j < otherArray.size(); j++) {
                                     if (!after.contains(otherArray.get(j))) {
                                         valid = false;
-                                        // Swap with the next element
+
                                         Collections.swap(otherArray, i, j);
-                                        i = -1; // Restart validation from the beginning
                                         break;
                                     }
                                 }
@@ -115,7 +111,7 @@ public class PrintQueue {
                     }
                 }
             }
-            System.out.println("Valid otherArray: " + otherArray);
+            // System.out.println("Valid otherArray: " + otherArray);
             int middleIndex = otherArray.size() / 2;
             sum += otherArray.get(middleIndex);
 
