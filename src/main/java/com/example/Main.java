@@ -32,7 +32,7 @@ public class Main {
 
         RopeBridge ropeBridge = new RopeBridge();
         long result_day7 = ropeBridge.result();
-        // int result2_day7 = ropeBridge.result_part2();
-        System.out.println("Day 7 Advent of Code: " + result_day7 );
+        long result2_day7 = ropeBridge.result_part2();
+        System.out.println("Day 7 Advent of Code: " + result_day7 + " " + result2_day7);
     }
 }
