@@ -25,14 +25,19 @@ public class Main {
         // int result2_day5 = printQueue.result_part2();
         // System.out.println("Day 5 Advent of Code: " + result_day5 + " " + result2_day5);
         
-        GuardGallivant guardGallivant = new GuardGallivant();
-        int result_day6 = guardGallivant.result();
-        int result2_day6 = guardGallivant.result_part2();
-        System.out.println("Day 6 Advent of Code: " + result_day6 + " " + result2_day6);
+        // GuardGallivant guardGallivant = new GuardGallivant();
+        // int result_day6 = guardGallivant.result();
+        // int result2_day6 = guardGallivant.result_part2();
+        // System.out.println("Day 6 Advent of Code: " + result_day6 + " " + result2_day6);
 
         // RopeBridge ropeBridge = new RopeBridge();
         // long result_day7 = ropeBridge.result();
         // long result2_day7 = ropeBridge.result_part2();
         // System.out.println("Day 7 Advent of Code: " + result_day7 + " " + result2_day7);
+    
+        ResonantCollinearity resonantCollinearity = new ResonantCollinearity();
+        int result_day8 = resonantCollinearity.solvePart1();
+        int result2_day8 = resonantCollinearity.solvePart2();
+        System.out.println("Day 8 Advent of Code: " + result_day8 + " "+ result2_day8);
     }
 }
