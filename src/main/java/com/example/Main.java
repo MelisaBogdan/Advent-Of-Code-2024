@@ -35,9 +35,14 @@ public class Main {
         // long result2_day7 = ropeBridge.result_part2();
         // System.out.println("Day 7 Advent of Code: " + result_day7 + " " + result2_day7);
     
-        ResonantCollinearity resonantCollinearity = new ResonantCollinearity();
-        int result_day8 = resonantCollinearity.solvePart1();
-        int result2_day8 = resonantCollinearity.solvePart2();
-        System.out.println("Day 8 Advent of Code: " + result_day8 + " "+ result2_day8);
+        // ResonantCollinearity resonantCollinearity = new ResonantCollinearity();
+        // int result_day8 = resonantCollinearity.solvePart1();
+        // int result2_day8 = resonantCollinearity.solvePart2();
+        // System.out.println("Day 8 Advent of Code: " + result_day8 + " "+ result2_day8);
+
+        DiskFragmenter diskFragmenter = new DiskFragmenter();
+        int result_day9 = diskFragmenter.result();
+        // int result2_day9 = diskFragmenter.result_part2();
+        System.out.println("Day 9 Advent of Code: " + result_day9 + " ");
     }
 }
